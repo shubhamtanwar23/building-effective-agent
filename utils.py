@@ -14,13 +14,14 @@ def call_llm(
     system_prompt: str = "",
     model="gpt-5.4",
     output_structure: BaseModel | Omit = omit,
+    temperature: float = 0.9,
 ) -> str:
     response = client.responses.parse(
         model=model,
         input=prompt,
         instructions=system_prompt,
         text_format=output_structure,
-        temperature=0.7,
+        temperature=temperature,
     )
 
     if output_structure:
