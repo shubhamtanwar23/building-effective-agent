@@ -12,14 +12,6 @@ class Route(BaseModel):
     )
 
 
-# State
-class State(BaseModel):
-    input: str
-    decision: str
-    output: str
-
-
-# Nodes
 def generate_story(user_input: str):
     """Write a story"""
 
